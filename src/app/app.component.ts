@@ -1,9 +1,10 @@
+import { ASTWithName } from '@angular/compiler';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.sass']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   name = 'Diana San';
@@ -17,11 +18,21 @@ export class AppComponent {
     avatar : 'https://cdn.pixabay.com/photo/2015/12/23/06/36/vector-1105214_960_720.png'
   }
 
-toggleButton(){
-  this.btnDisabled = !this.btnDisabled;
-}
+  toggleButton(){
+    this.btnDisabled = !this.btnDisabled;
+  }
 
-agePlus(){
-  this.person.age++;
-}
+  agePlus(){
+    this.person.age++;
+  }
+
+  onScroll(event: Event){
+    const element = event.target as HTMLElement;
+    console.log(element.scrollTop);
+  }
+
+  changeName(event : Event){
+    const element = event.target as HTMLInputElement;
+    this.person.name = element.value;
+  }
 }
