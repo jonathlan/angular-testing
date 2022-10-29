@@ -16,4 +16,12 @@ export class AppComponent {
     age: 18,
     avatar : 'https://cdn.pixabay.com/photo/2015/12/23/06/36/vector-1105214_960_720.png'
   }
+
+toggleButton(){
+  this.btnDisabled = !this.btnDisabled;
+}
+
+agePlus(){
+  this.person.age++;
+}
 }
