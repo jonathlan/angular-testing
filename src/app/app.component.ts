@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.sass']
 })
 export class AppComponent {
-  title = 'angular-testing';
+  name = 'Diana San';
+  age = 24;
+  img = 'https://cdn.pixabay.com/photo/2015/12/23/06/36/vector-1105214_960_720.png';
 }
