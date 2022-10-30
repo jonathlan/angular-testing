@@ -18,6 +18,9 @@ export class AppComponent {
     avatar : 'https://cdn.pixabay.com/photo/2015/12/23/06/36/vector-1105214_960_720.png'
   }
 
+  names: string[] = ['Angela', 'Valeria', 'Ricardo'];
+  newName: string = '';
+
   toggleButton(){
     this.btnDisabled = !this.btnDisabled;
   }
@@ -34,5 +37,14 @@ export class AppComponent {
   changeName(event : Event){
     const element = event.target as HTMLInputElement;
     this.person.name = element.value;
+  }
+
+  addName(){
+    this.names.push(this.newName);
+    this.newName = '';
+  }
+
+  deleteName(index: number){
+    this.names.splice(index, 1);
   }
 }
