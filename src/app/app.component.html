@@ -1,3 +1,11 @@
+<h1>*ngIf</h1>
+<input type="text" required [(ngModel)]="person.name"/>
+<p *ngIf="person.name === 'Daniel'">Daniel entered</p>
+<p *ngIf="person.name === 'Diana' && person.age == 18; else noMatch">Daniel entered</p>
+<ng-template #noMatch>
+  <p>Condition not matched.</p>
+</ng-template>
+<hr/>
 <h1>NgModel -> for data biding</h1>
 <p>New name: {{person.name}}</p>
 <input type="text" required #nameInput="ngModel" [(ngModel)]="person.name"/>
