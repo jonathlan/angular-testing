@@ -8,9 +8,9 @@
 </div>
 <hr/>
 <h1>*ngFor with objects</h1>
-<div>
+<div class="products-grid">
   <div *ngFor="let product of products">
-    <img width="250" [src]="product.image" [alt]="product.name">
+    <img [src]="product.image" [alt]="product.name">
     <h2>{{product.price}}</h2>
     <p>{{product.name}}</p>
   </div>
@@ -64,4 +64,4 @@
 <h2>{{'Hello world|'.repeat(5)}}</h2>
 <p>3 + 3 = {{3 + 3}}</p>
 <h3>Hello, my name is {{name}}, and my age is: {{age}}</h3>
-<img src={{img}} alt="Profile picture">
+<img width="200" src={{img}} alt="Profile picture">
