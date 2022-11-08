@@ -8,6 +8,7 @@ import { Product } from './product.model';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  imgWidth = 10;
   name = 'Diana San';
   age = 24;
   img = 'https://cdn.pixabay.com/photo/2015/12/23/06/36/vector-1105214_960_720.png';
