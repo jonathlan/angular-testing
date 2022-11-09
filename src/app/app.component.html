@@ -1,24 +1,35 @@
-<h1>My registration form</h1>
-<form (ngSubmit)="onRegister()" #myForm="ngForm">
+<h1 class="form-title">My registration form</h1>
+<form (ngSubmit)="onRegister()" #myForm="ngForm" id="myform">
   <div class="input-group">
     <label for="name">Name</label>
-    <input type="text" name="name" required id="name" [(ngModel)]="register.name">
-    <p>Error message</p>
+    <div>
+      <input type="text" [class.input-error]="nameInput5.invalid" #nameInput5="ngModel" name="name" required id="name"
+        [(ngModel)]="register.name">
+      <p class="field-error" [class.invalid]="nameInput5.invalid">Name is required</p>
+    </div>
   </div>
   <div class="input-group">
     <label for="email">Email</label>
-    <input type="email" name="email" required id="email" [(ngModel)]="register.email">
-    <p>Error message</p>
+    <div>
+      <input type="email" [class.input-error]="emailInput.invalid" #emailInput="ngModel" name="email" required
+        id="email" [(ngModel)]="register.email">
+      <p class="field-error" [class.invalid]="emailInput.invalid">Email is required</p>
+    </div>
   </div>
   <div class="input-group">
     <label for="pwd">Password</label>
-    <input type="password" name="password" required id="pwd" [(ngModel)]="register.password">
-    <p>Error message</p>
+    <div>
+      <input type="password" [class.input-error]="pwdinput.invalid" #pwdinput="ngModel" name="password" required
+        id="pwd" [(ngModel)]="register.password">
+      <p class="field-error" [class.invalid]="pwdinput.invalid">Password is required</p>
+    </div>
   </div>
-  <button [disabled]="myForm.invalid" type="submit">Register</button>
-  <button type="button">Action</button>
+  <div class="button-group">
+    <button [disabled]="myForm.invalid" [class.btn-error]="myForm.invalid" type="submit">Register</button>
+    <button type="button">Action</button>
+  </div>
 </form>
-<hr/>
+<hr />
 
 <h1>NgClass & NgStyle</h1>
 <input type="text" required #nameInput4="ngModel" [(ngModel)]="person.name"/>
