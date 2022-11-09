@@ -29,7 +29,7 @@
   }"
   />
 <p class="message-error" [class.invalid]="nameInput4.invalid">This field is required</p>
-<div class="vertical">
+<div class="horizontal">
   <div>
     <input type="number" [(ngModel)]="box.width"/>
     <input type="number" [(ngModel)]="box.height"/>
@@ -52,7 +52,7 @@
 
 <input type="text" required #nameInput3="ngModel" [(ngModel)]="person.name"/>
 <p [style.font-style]="nameInput3.invalid ? 'italic' : 'normal'">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, aperiam.</p>
-<div class="vertical">
+<div class="horizontal">
   <div>
     <input type="number" [(ngModel)]="imgWidth"/>
   </div>
